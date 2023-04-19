@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /*Fonte importada do site Google Fonts. */ 
+
+@font-face {
+    font-family: 'Android';
+    src: url(../fontes/idroid.otf) format(opentype);
+    font-weight: normal;
+} /*Font-face é utilizado para importar arquivos de fontes de suas pastas.*/
+
+:root {
+    --cor0: #AFEBC8;
+    --cor1: #39DB7D;
+    --cor2: #2FB567;
+    --cor3: #4F8C68;
+    --cor4: #185C34 ;
+    --cor5: #063D1E;
+
+    --fonte-padrão: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive
+
+} /*Raiz: Pseudo-classe que serve para todo o documento. A variável dentro da pseudo-classe começa com --.*/ 
+
+* {
+    margin: 0px;
+    padding: 0px;
+} /*Seletor global para todos os elementos.*/ 
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrão);
+}
+
+a.externo::after {
+    content: '\1F517';
+} /* OBS*/
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor4));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.466);
+}
+
+header > p {
+    color: white;
+    font-family: var(--fonte-padrão);
+    font-size: 1em;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 500px;
+    margin: auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.452);
+
+}
+
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.356);
+}
+
+nav > a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s; /*Este elemento determina a duração para o hover abaixo aparecer.*/
+}
+
+nav > a:hover {
+    color: var(--cor5);
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor2));
+    border-radius: 5px;
+}
+
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.432);
+    border-radius: 0px 0px 10px 10px;
+}
+
+/*Usa-se > quando o elemento estiver imediatamente dentro. Caso contrário, ele não é utilizado. Existem mais elementos dentro do main. No caso, o h1 está dentro do <article>, para tanto, pode-se utilizar main > article > h1.*/
+
+main h1 {
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+main h2 {
+    color: var(--cor4);
+    font-family: var(--fonte-android);
+    font-size: 1.2em;
+    font-weight: normal;
+    text-indent: 20px;
+    background-image: linear-gradient(to right, var(--cor0), transparent);
+}
+
+main p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1.1em;
+    line-height: 2em; /*Espaço entre linhas.*/
+}
+
+main strong {
+    font-weight: bold;
+}
+
+main a {
+    color: var(--cor3);
+    background-color: var(--cor0);
+    text-decoration: none;
+    padding: 2px 6px;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
+
+main img {
+    width: 100%;
+}
+
+main img.pequena {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+} /*Como imagem não é um bloco, é preciso exibi-la como block para centralizá-la com a margin: auto.*/
+
+div.video {
+    background-color: #063D1E;
+    margin-bottom: 20px;
+    margin: 0px -20px 20px -20px;
+    padding: 10px 10px 5px 10px;
+    padding-bottom: 58.2%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside {
+    background-color: var(--cor0);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.404);
+}
+
+aside h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px; /*Obs.: Ver depois!!*/
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside ul {
+    list-style-type: '\2705';
+    list-style-position: inside; /*Os itens ficam dentro do aside*/
+    columns: 2;
+}
+
+footer {
+    background-color: var(--cor5);
+    color: white;
+    font-size: 0.9em;
+    text-align: center;
+    padding: 8px;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--cor0);
+    text-decoration: underline;
+}

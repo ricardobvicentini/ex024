@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-space=1.0">
+    <title>Teste de responsividade &#x1f603</title>
+    <style>
+      body {
+            background-color: aliceblue;
+        }
+
+        main {
+            background-color: rgb(101, 180, 180);
+            padding: 20px;
+            border-radius: 10px;   
+            min-width: 320px;/*Tamanho de celurares mais antigos. Mas os paddings podem ocupar espaços, conforme for o caso.*/
+            max-width: 820px;
+            margin: auto; /*Serve para deixar as margens automáticas, mantendo o conteúdo no centro caso a tela se expanda.*/
+        }
+
+        img {
+            width: 100%; /*Para que a imagem mantenha seu tamanho.*/
+        }
+
+        footer {
+            background-color: aqua;
+            border-radius: 10px;
+            padding: 20px;
+            min-width: 320px;
+            max-width: 820px;
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        footer p {
+            padding: 10px;
+            margin: 0px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <main>
+        <h1>Testando responsividade</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, nihil. Aspernatur ratione nulla excepturi commodi quam deleniti! Magnam quidem eligendi eius sunt, ea nobis cumque, dolorem libero placeat neque provident.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores ipsa id eius asperiores. Sint eos cumque, aperiam illum dignissimos laboriosam veritatis accusantium quisquam, est perspiciatis quaerat suscipit quae, corporis ratione.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum asperiores nesciunt ipsa id enim vitae quia modi a, facilis, repudiandae sapiente velit eius nihil natus adipisci. Rerum modi culpa tempora.</p>
+        <picture>
+            <source media="(max-width: 650px)" srcset="imagens/irina-blok-pq.jpg">
+            <img src="imagens/irina-blok.jpg" alt="Irina Blok">
+        </picture> <!-- A tag <source media> dentro de <picture> serve para que, quando a imagem atingir determinada largura, uma outra imagem seja utilizada, no caso "imagens/irina-blok.jpg". -->
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis amet commodi repellat voluptatibus suscipit vel. Sequi repellendus veniam nihil, corporis voluptate placeat, ducimus incidunt, temporibus aliquam vero quia. Unde, soluta.</p>
+    </main>
+    <footer>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio id, corporis dignissimos quasi inventore atque perspiciatis! Optio eum temporibus hic harum. Laudantium ut in beatae deserunt assumenda quibusdam, similique molestiae?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptatibus nulla, asperiores obcaecati vel facilis doloremque. Praesentium nisi eaque, vero sequi deleniti voluptatum nesciunt consequatur ipsum sit at dolorem eligendi!</p>
+    </footer>
+</body>
+</html>
